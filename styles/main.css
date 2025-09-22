@@ -1,0 +1,123 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-container h1{
+    font-family: "Dancing Script", cursive;
+    color: rgb(255, 123, 0);
+    font-size: 4.25em;
+}
+
+.input-container{
+    display: flex;
+    gap: 20px;
+}
+
+.input-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-box div{
+    background-color:  rgb(255, 191, 87);
+}
+
+.input-div input{
+    background-color:  rgb(255, 191, 87);
+    border: none;
+    font-size: 1em;
+    padding: 10px;
+    width: 35vw;
+}
+
+.attach, .send{
+    padding: 5px 10px;
+}
+
+.attach{
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.send{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.microphone{
+    background-color: rgb(255, 191, 87);
+    border-radius: 25px;
+    width: 35px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-div input:focus{
+    outline: none;
+}
+
+.attach:hover, .send:hover, .microphone:hover{
+    opacity: 0.85;
+    color: rgb(246, 129, 5);
+    cursor: pointer;
+}
+
+.attach:active, .send:active, .microphone:active{
+    opacity: 0.75;
+    color: rgb(225, 164, 98);
+}
+
+@media(max-width: 1000px) {
+    .title-container h1{
+        font-size: 3.5em;
+    }
+
+    .input-div input{
+        width: 45vw;
+    }
+}
+
+@media (max-width: 500px) {
+    .title-container h1{
+        font-size: 3em;
+    }
+
+    .input-div input{
+        padding: 6.5px;
+    }
+
+    .attach, .send{
+        padding: 2px 5px;
+    }
+
+    .attach{
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+    }
+
+    .send{
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    .input-container{
+        gap: 5px;
+    }
+
+    .microphone{
+        width: 25px;
+    }
+}

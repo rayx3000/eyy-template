@@ -1,0 +1,49 @@
+*{
+    font-family: 'Rubik', Consolas;
+}
+
+body{
+    background: #ffb012;
+    background: -webkit-linear-gradient(90deg, rgba(255, 176, 18, 1) 0%, rgba(255, 209, 117, 0.8) 50%, rgba(255, 176, 18, 1) 100%);
+    background: -moz-linear-gradient(90deg, rgba(255, 176, 18, 1) 0%, rgba(255, 209, 117, 0.8) 50%, rgba(255, 176, 18, 1) 100%);
+    background: linear-gradient(90deg, rgba(255, 176, 18, 1) 0%, rgba(255, 209, 117, 0.8) 50%, rgba(255, 176, 18, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#FFB012", endColorstr="#FFB012", GradientType=1);
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scroll::-webkit-scrollbar-track {
+    background: rgba(240, 107, 5, 1);
+    border-radius: 10px;
+    margin: 7.5px 0;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background: linear-gradient(45deg, #f06b05, #ff4811);
+    border-radius: 10px;
+    box-shadow: 0 0 20px #f06b05, 0 0 40px #ff4811;
+    animation: neonPulse 2s ease-in-out infinite alternate;
+    min-height: 20px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 0 30px #f06b05, 0 0 60px #ff4811;
+}
+
+.scroll::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+/* Add the missing neonPulse animation */
+@keyframes neonPulse {
+    from { 
+        box-shadow: 0 0 20px #f06b05, 0 0 40px #ff4811;
+    }
+    to { 
+        box-shadow: 0 0 30px #f06b05, 0 0 60px #ff4811;
+    }
+}

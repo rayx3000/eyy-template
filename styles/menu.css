@@ -1,0 +1,142 @@
+.menu-bar{
+    position: fixed;
+    background: #f06b05;    
+    background: linear-gradient(90deg, rgba(240, 107, 5, 1) 0%, rgb(255, 156, 80) 50%, rgba(240, 107, 5, 1) 100%);
+    top: 0px;
+    left: 0px;
+    width: 280px; /* Increased width to prevent text wrapping */
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    padding: 0; /* Ensure no extra padding */
+    box-sizing: border-box;
+}
+
+.feature-bar{
+    margin-top: 50px; /* More space from top */
+    flex: 1; 
+    max-height: calc(80vh - 180px); /* Account for header and footer space */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+#closeMenu{
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Increased from 2px for better spacing */
+    cursor: pointer;
+    font-size: 18px; /* Added size for better visibility */
+    z-index: 101; /* Ensure it's above other elements */
+}
+
+#closeMenu:hover{
+    opacity: 0.85;
+    color: rgb(245, 188, 5);
+    cursor: pointer;
+}
+
+#closeMenu:active{
+    opacity: 0.75;
+    color: rgb(245, 210, 112);
+}
+
+.feature-label, .account-option, .log-out-option{
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Increased gap */
+    padding: 15px 20px; /* Simplified padding, more vertical space */
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-size: 16px; /* Consistent font size */
+    white-space: nowrap; /* Prevent text wrapping */
+    min-height: 24px; /* Minimum height for consistent spacing */
+}
+
+.feature-label:hover, .account-container:hover, .account-option:hover, .log-out-option:hover{
+    background: #ee7921;
+}
+
+.feature-label:active, .account-container:active, .account-option:active, .log-out-option:active{
+    background: #ee8535;
+}
+
+.account-bar{
+    margin-top: auto; /* Push to bottom instead of fixed margin */
+    margin-bottom: 10px; /* Added bottom margin */
+    bottom: 0; /* Stick to bottom */
+    flex: 0 0 auto; /* Don't grow or shrink */
+}
+
+.account-container{
+    display: flex;
+    gap: 15px; /* Increased gap */
+    align-items: center;
+    padding: 15px 20px; /* Consistent padding */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-size: 16px; /* Consistent font size */
+    white-space: nowrap;
+    min-height: 24px;
+}
+
+.menu-profile-icon{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    background-color: #888888;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+@media(max-width: 1000px){
+    .menu-bar{
+        width: 250px;
+    }
+
+    .feature-label, .account-option, .log-out-option{
+        font-size: 13.5px;
+        padding: 11.5px 18.5px;
+    }
+
+    .account-container{
+        padding: 11.5px 18.5px;
+        font-size: 13.5px;
+    }
+
+    .menu-profile-icon{
+        width: 27.5px;
+        height: 27.5px;
+        border-radius: 13.5px;
+    }
+}
+
+@media(max-width: 650px){
+    .menu-bar{
+        width: 200px;
+    }
+
+    .feature-label, .account-option, .log-out-option{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .account-container{
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .menu-profile-icon{
+        width: 25px;
+        height: 25px;
+        border-radius: 12.5px;
+    }
+}
+
+@media (max-width: 475px) {
+    .menu-bar{
+        width: 180px;
+    }
+}
